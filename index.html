@@ -243,7 +243,7 @@
     #hero {
       width: 100%;
       height: 80vh;
-      background: linear-gradient(45deg, rgba(21, 72, 84, 0.8) 0%, rgba(42, 107, 120, 0.8) 100%), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center center;
+      background: linear-gradient(45deg, rgba(21, 72, 84, 0.8) 0%, rgba(42, 107, 120, 0.8) 100%), url('img/stock-images/cityline.avif') center center;
       background-size: cover;
       background-attachment: fixed;
       color: white;
@@ -794,10 +794,10 @@
       padding: 20px;
       width: 90%;
       max-width: 900px;
+      max-height: 90vh;
       border-radius: 20px;
-      display: flex;
       box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-      overflow: hidden;
+      overflow-y: auto;
       animation: modalSlideIn 0.3s ease-out;
     }
 
@@ -812,14 +812,40 @@
       }
     }
 
+    .modal-title-section {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #e0f2f2;
+    }
+
+    .modal-title-section h3 {
+      margin: 0 0 10px 0;
+      color: var(--color-primary);
+      font-size: 32px;
+      font-weight: 700;
+      font-family: var(--font-secondary);
+      line-height: 1.2;
+    }
+
+    .modal-title-section h4 {
+      color: var(--color-secondary);
+      font-size: 20px;
+      margin: 0;
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    .modal-content-area {
+      position: relative;
+    }
+
     .modal-image {
-      flex: 1;
-      max-width: 350px;
-      min-height: 400px;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      float: right;
+      width: 280px;
+      height: 350px;
+      margin-left: 30px;
+      margin-bottom: 20px;
+      flex-shrink: 0;
     }
 
     .modal-image img {
@@ -830,55 +856,22 @@
       box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     }
 
-    .modal-text {
-      flex: 2;
-      padding: 30px 25px;
-      background: linear-gradient(135deg, #ffffff 0%, #f8fffe 100%);
-      position: relative;
+    .modal-bio {
+      text-align: justify;
     }
 
-    .modal-text::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-    }
-
-    .modal-text h3 {
-      margin-top: 0;
-      margin-bottom: 15px;
-      color: var(--color-primary);
-      font-size: 32px;
-      font-weight: 700;
-      font-family: var(--font-secondary);
-      line-height: 1.2;
-    }
-
-    .modal-text h4 {
-      color: var(--color-secondary);
-      font-size: 20px;
-      margin-bottom: 30px;
-      font-weight: 500;
-      font-style: italic;
-      padding-bottom: 15px;
-      border-bottom: 2px solid #e0f2f2;
-    }
-
-    .modal-text p {
+    .modal-bio p {
       line-height: 1.8;
       color: #555;
       font-size: 16px;
       margin-bottom: 20px;
     }
 
-    .modal-text p:last-child {
+    .modal-bio p:last-child {
       margin-bottom: 0;
     }
 
-    .modal-text strong, .modal-text b {
+    .modal-bio strong, .modal-bio b {
       color: var(--color-primary);
       font-weight: 600;
     }
@@ -911,7 +904,6 @@
 
     @media (max-width: 768px) {
       .modal-content {
-        flex-direction: column;
         margin: 5% auto;
         width: 95%;
         max-height: 90vh;
@@ -920,30 +912,21 @@
       }
 
       .modal-image {
-        max-width: 100%;
-        min-height: 250px;
-        max-height: 300px;
-        padding: 5px;
+        float: none;
+        width: 100%;
+        height: 250px;
+        margin: 0 0 15px 0;
       }
 
-      .modal-image img {
-        border-radius: 15px;
-      }
-
-      .modal-text {
-        padding: 20px 15px;
-      }
-
-      .modal-text h3 {
+      .modal-title-section h3 {
         font-size: 26px;
       }
 
-      .modal-text h4 {
+      .modal-title-section h4 {
         font-size: 18px;
-        margin-bottom: 20px;
       }
 
-      .modal-text p {
+      .modal-bio p {
         font-size: 15px;
       }
 
@@ -1050,7 +1033,7 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" class="img-fluid" alt="Professional business meeting" loading="lazy">
+            <img src="img/stock-images/data-center-aisle.jpeg" class="img-fluid" alt="Data center aisle with servers" loading="lazy">
               </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center">
             <h3>Focused on sustainable, profitable growth</h3>
@@ -1136,19 +1119,21 @@
 
           <div class="col-lg-4 col-md-4 d-flex align-items-center justify-content-center">
             <div class="company-logo">
+              <a href="https://www.connectbase.com/" target="_blank" rel="noopener noreferrer">
+                <img src="img/portfolio-logos/Connectbase_Logo_Colour.png" class="img-fluid" alt="Connectbase" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-4 d-flex align-items-center justify-content-center">
+            <div class="company-logo">
               <a href="https://key.ai/" target="_blank" rel="noopener noreferrer">
                 <img src="img/portfolio-logos/KeyAI-logo.png" class="img-fluid" alt="Key AI" loading="lazy">
               </a>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 d-flex align-items-center justify-content-center">
-            <div class="company-logo">
-              <a href="https://www.connectbase.com/" target="_blank" rel="noopener noreferrer">
-                <img src="img/portfolio-logos/Connectbase_Logo_Colour.png" class="img-fluid" alt="Connectbase" loading="lazy">
-              </a>
-            </div>
-          </div>
 
           <div class="col-lg-4 col-md-4 d-flex align-items-center justify-content-center">
             <div class="company-logo">
@@ -1178,7 +1163,11 @@
           <article class="portfolio-item col-sm-3 col-12 p-0 m-0">
             <div class="grid-inner">
               <div class="portfolio-image">
-                <img loading="lazy" src="img/team-headshots/tony-rossabi-city-square.webp" alt="Tony Rossabi" class="square-image">
+                <img loading="lazy" src="img/team-headshots/tony-rossabi-city-square.webp" alt="Tony Rossabi" class="square-image modal-trigger" 
+                     data-name="Tony Rossabi" 
+                     data-title="Partner" 
+                     data-bio="<p>Tony Rossabi is a Partner at Aura Principal Group with over 25 years of experience driving growth and innovation for technology and telecommunications enterprises. Tony has guided several companies to successful turnarounds and exits.</p><p>Prior experience includes serving as CEO and Board Member of Recovery Point Systems (RPS), Executive Vice President and Chief Revenue Officer at TierPoint, Managing Director for Digital Realty Trust's colocation business, and Executive Vice President at Telx Group (acquired by DRT for $1.98 billion).</p><p>Tony is an Independent Director for Connectbase, Vantage Data Centers, 1623 Farnam, and Contract Leasing Corporation. He supports several organizations as a member of non-profit Boards, including the Pacific Telecommunications Council (PTC) and the Board of Surgeons Overseas.</p><p>Tony holds BA, MBA, and Juris Doctor (JD) degrees.</p>" 
+                     data-image="img/team-headshots/tony-rossabi-city-square.webp">
                 
                 <!-- Always visible name overlay with click action -->
                 <div class="name-overlay modal-trigger" 
@@ -1196,7 +1185,11 @@
           <article class="portfolio-item col-sm-3 col-12 p-0 m-0">
             <div class="grid-inner">
               <div class="portfolio-image">
-                <img loading="lazy" src="img/team-headshots/tony-rossabi-city-square.webp" alt="Team Member" class="square-image">
+                <img loading="lazy" src="img/team-headshots/tony-rossabi-city-square.webp" alt="Team Member" class="square-image modal-trigger" 
+                     data-name="Team Member" 
+                     data-title="Position Title" 
+                     data-bio="<p>Bio information for this team member will be added here.</p>" 
+                     data-image="img/team-headshots/tony-rossabi-city-square.webp">
                 
                 <!-- Always visible name overlay with click action -->
                 <div class="name-overlay modal-trigger" 
@@ -1214,7 +1207,11 @@
           <article class="portfolio-item col-sm-3 col-12 p-0 m-0">
             <div class="grid-inner">
               <div class="portfolio-image">
-                <img loading="lazy" src="img/team-headshots/tony-rossabi-city-square.webp" alt="Team Member" class="square-image">
+                <img loading="lazy" src="img/team-headshots/tony-rossabi-city-square.webp" alt="Team Member" class="square-image modal-trigger" 
+                     data-name="Team Member" 
+                     data-title="Position Title" 
+                     data-bio="<p>Bio information for this team member will be added here.</p>" 
+                     data-image="img/team-headshots/tony-rossabi-city-square.webp">
                 
                 <!-- Always visible name overlay with click action -->
                 <div class="name-overlay modal-trigger" 
@@ -1232,7 +1229,11 @@
           <article class="portfolio-item col-sm-3 col-12 p-0 m-0">
             <div class="grid-inner">
               <div class="portfolio-image">
-                <img loading="lazy" src="img/team-headshots/tony-rossabi-city-square.webp" alt="Team Member" class="square-image">
+                <img loading="lazy" src="img/team-headshots/tony-rossabi-city-square.webp" alt="Team Member" class="square-image modal-trigger" 
+                     data-name="Team Member" 
+                     data-title="Position Title" 
+                     data-bio="<p>Bio information for this team member will be added here.</p>" 
+                     data-image="img/team-headshots/tony-rossabi-city-square.webp">
                 
                 <!-- Always visible name overlay with click action -->
                 <div class="name-overlay modal-trigger" 
@@ -1252,13 +1253,15 @@
         <!-- Team Bio Modal -->
         <div id="teamModal" class="modal">
           <div class="modal-content">
-            <div class="modal-image">
-              <img loading="lazy" id="modalImage" src="img/team-headshots/tony-rossabi-city-square.webp" alt="Team Member">
-            </div>
-            <div class="modal-text">
+            <div class="modal-title-section">
               <h3 id="modalName">Team Member</h3>
               <h4 id="modalTitle">Position Title</h4>
-              <div id="modalBio">
+            </div>
+            <div class="modal-content-area">
+              <div class="modal-image">
+                <img loading="lazy" id="modalImage" src="img/team-headshots/tony-rossabi-city-square.webp" alt="Team Member">
+              </div>
+              <div class="modal-bio" id="modalBio">
                 <p>Bio information will appear here.</p>
               </div>
             </div>
@@ -1345,7 +1348,7 @@
     </div>
 
     <div class="container py-4">
-      <div class="copyright" style="padding-bottom: 20px;">
+      <div class="copyright">
         &copy; Copyright <strong><span>Aura Principal Group</span></strong>. All Rights Reserved
       </div>
     </div>
