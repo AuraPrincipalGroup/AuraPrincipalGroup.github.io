@@ -22,7 +22,7 @@
   <meta property="og:url" content="https://auraprincipalgroup.com/">
   <meta property="og:title" content="Aura Principal Group - Investment Management & Venture Capital">
   <meta property="og:description" content="Aura Principal Group invests in venture and growing, cash flow positive businesses. We partner with entrepreneurs to provide growth capital and strategic expertise.">
-  <meta property="og:image" content="https://auraprincipalgroup.com/img/logos/3-wide.png">
+  <meta property="og:image" content="https://auraprincipalgroup.com/img/logos/aura-color-transparent-bg.png">
   <meta property="og:site_name" content="Aura Principal Group">
   <meta property="og:locale" content="en_US">
 
@@ -31,11 +31,11 @@
   <meta property="twitter:url" content="https://auraprincipalgroup.com/">
   <meta property="twitter:title" content="Aura Principal Group - Investment Management & Venture Capital">
   <meta property="twitter:description" content="Aura Principal Group invests in venture and growing, cash flow positive businesses. We partner with entrepreneurs to provide growth capital and strategic expertise.">
-  <meta property="twitter:image" content="https://auraprincipalgroup.com/img/logos/3-wide.png">
+  <meta property="twitter:image" content="https://auraprincipalgroup.com/img/logos/aura-color-transparent-bg.png">
 
   <!-- Favicons -->
-  <link href="" rel="icon">
-  <link href="" rel="apple-touch-icon">
+  <link href="img/logos/aura-color-bg-square.png" rel="icon">
+  <link href="img/logos/aura-color-bg-square.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -51,7 +51,7 @@
     "@type": "Organization",
     "name": "Aura Principal Group",
     "url": "https://auraprincipalgroup.com",
-    "logo": "https://auraprincipalgroup.com/img/logos/3-wide.png",
+    "logo": "https://auraprincipalgroup.com/img/logos/aura-color-transparent-bg.png",
     "description": "Aura Principal Group invests in venture and growing, cash flow positive businesses. We partner with entrepreneurs to provide growth capital and strategic expertise.",
     "email": "contact@auraprincipalgroup.com",
     "foundingDate": "2024",
@@ -147,7 +147,7 @@
     }
 
     #header .logo img {
-      max-height: 50px;
+      max-height: 70px;
       width: auto;
     }
 
@@ -328,6 +328,28 @@
     /*--------------------------------------------------------------
     # About
     --------------------------------------------------------------*/
+    .about .image-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .about .image-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(21, 72, 84, 0.5) 0%, rgba(42, 107, 120, 0.5) 100%);
+      z-index: 1;
+    }
+
+    .about .image-container img {
+      position: relative;
+      z-index: 0;
+    }
+
     .about .content h3 {
       font-weight: 600;
       font-size: 26px;
@@ -948,7 +970,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <img src="img/logos/3-wide.png" alt="Aura Principal Group" loading="lazy">
+        <img src="img/logos/aura-color-transparent-bg.png" alt="Aura Principal Group" loading="lazy">
         </div>
 
       <nav id="navbar" class="navbar">
@@ -1033,8 +1055,10 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <img src="img/stock-images/data-center-aisle.jpeg" class="img-fluid" alt="Data center aisle with servers" loading="lazy">
-              </div>
+            <div class="image-container">
+              <img src="img/stock-images/park-new-york-city-nyc-manhattan-162024.jpeg" class="img-fluid" alt="Modern conference room with city view" loading="lazy">
+            </div>
+          </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center">
             <h3>Focused on sustainable, profitable growth</h3>
             <p class="fst-italic">
@@ -1185,64 +1209,20 @@
           <article class="portfolio-item col-sm-3 col-12 p-0 m-0">
             <div class="grid-inner">
               <div class="portfolio-image">
-                <img loading="lazy" src="img/team-headshots/tony-rossabi-city-square.webp" alt="Team Member" class="square-image modal-trigger" 
-                     data-name="Team Member" 
-                     data-title="Position Title" 
-                     data-bio="<p>Bio information for this team member will be added here.</p>" 
-                     data-image="img/team-headshots/tony-rossabi-city-square.webp">
+                <img loading="lazy" src="img/team-headshots/cypress-tucker-city-square.webp" alt="Cypress Tucker" class="square-image modal-trigger" 
+                     data-name="Cypress Tucker" 
+                     data-title="Director of Administrative Services" 
+                     data-bio="<p>Cypress Tucker serves as Director of Administrative Services at Aura Principal Group, bringing extensive experience in sales operations and administrative leadership.</p><p>Prior to joining Aura Principal Group, Cypress served as Sr. Sales Operations Manager for Recovery Point Systems (RPS). Prior to Recovery Point, Cypress held roles at TierPoint, Xand, and RagingWire (acquired by NTT).</p>" 
+                     data-image="img/team-headshots/cypress-tucker-city-square.webp">
                 
                 <!-- Always visible name overlay with click action -->
                 <div class="name-overlay modal-trigger" 
-                     data-name="Team Member" 
-                     data-title="Position Title" 
-                     data-bio="<p>Bio information for this team member will be added here.</p>" 
-                     data-image="img/team-headshots/tony-rossabi-city-square.webp">
-                  <h4>Team Member</h4>
-                  <p>Position Title</p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="portfolio-item col-sm-3 col-12 p-0 m-0">
-            <div class="grid-inner">
-              <div class="portfolio-image">
-                <img loading="lazy" src="img/team-headshots/tony-rossabi-city-square.webp" alt="Team Member" class="square-image modal-trigger" 
-                     data-name="Team Member" 
-                     data-title="Position Title" 
-                     data-bio="<p>Bio information for this team member will be added here.</p>" 
-                     data-image="img/team-headshots/tony-rossabi-city-square.webp">
-                
-                <!-- Always visible name overlay with click action -->
-                <div class="name-overlay modal-trigger" 
-                     data-name="Team Member" 
-                     data-title="Position Title" 
-                     data-bio="<p>Bio information for this team member will be added here.</p>" 
-                     data-image="img/team-headshots/tony-rossabi-city-square.webp">
-                  <h4>Team Member</h4>
-                  <p>Position Title</p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="portfolio-item col-sm-3 col-12 p-0 m-0">
-            <div class="grid-inner">
-              <div class="portfolio-image">
-                <img loading="lazy" src="img/team-headshots/tony-rossabi-city-square.webp" alt="Team Member" class="square-image modal-trigger" 
-                     data-name="Team Member" 
-                     data-title="Position Title" 
-                     data-bio="<p>Bio information for this team member will be added here.</p>" 
-                     data-image="img/team-headshots/tony-rossabi-city-square.webp">
-                
-                <!-- Always visible name overlay with click action -->
-                <div class="name-overlay modal-trigger" 
-                     data-name="Team Member" 
-                     data-title="Position Title" 
-                     data-bio="<p>Bio information for this team member will be added here.</p>" 
-                     data-image="img/team-headshots/tony-rossabi-city-square.webp">
-                  <h4>Team Member</h4>
-                  <p>Position Title</p>
+                     data-name="Cypress Tucker" 
+                     data-title="Director of Administrative Services" 
+                     data-bio="<p>Cypress Tucker serves as Director of Administrative Services at Aura Principal Group, bringing extensive experience in sales operations and administrative leadership.</p><p>Prior to joining Aura Principal Group, Cypress served as Sr. Sales Operations Manager for Recovery Point Systems (RPS). Prior to Recovery Point, Cypress held roles at TierPoint, Xand, and RagingWire (acquired by NTT).</p>" 
+                     data-image="img/team-headshots/cypress-tucker-city-square.webp">
+                  <h4>Cypress Tucker</h4>
+                  <p>Director of Administrative Services</p>
                 </div>
               </div>
             </div>
@@ -1306,7 +1286,7 @@
 
           <div class="col-lg-3 col-md-6 footer-contact">
             <div class="footer-logo">
-              <img src="img/logos/3-wide.png" alt="Aura Principal Group Logo" loading="lazy">
+              <img src="img/logos/aura-color-bg.png" alt="Aura Principal Group Logo" loading="lazy">
             </div>
             <h3>Aura<span>.</span></h3>
             <p>
@@ -1336,12 +1316,15 @@
             </ul>
           </div>
 
+          <!-- Social Media Links -->
+           <!--
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Connect With Us</h4>
             <div class="social-links mt-3">
               <a href="#" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
+          -->
 
         </div>
       </div>
