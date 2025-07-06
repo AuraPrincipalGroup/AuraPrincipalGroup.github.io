@@ -633,6 +633,11 @@
       z-index: 2;
       cursor: pointer;
       transition: all 0.3s ease;
+      height: 80px; /* Fixed height for consistent overlay size */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .team .portfolio-item .name-overlay:hover {
@@ -680,6 +685,10 @@
     @media (max-width: 768px) {
       .team .portfolio-item .portfolio-image img.square-image {
         height: 250px;
+      }
+      
+      .team .portfolio-item .name-overlay {
+        height: 70px; /* Slightly smaller fixed height on mobile */
       }
       
       .team .portfolio-item .name-overlay h4 {
