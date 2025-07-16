@@ -10,9 +10,12 @@
   <meta name="title" content="Aura Principal Group - Investment Management & Venture Capital">
   <meta name="description" content="Aura Principal Group invests in venture and growing, cash flow positive businesses. We partner with entrepreneurs to provide growth capital and strategic expertise for sustainable business growth.">
   <meta name="keywords" content="investment management, venture capital, private equity, growth capital, cash flow positive businesses, strategic partnerships, Aura Principal Group, business investment">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="language" content="English">
   <meta name="author" content="Aura Principal Group">
+  <meta name="revisit-after" content="7 days">
+  <meta name="distribution" content="global">
+  <meta name="rating" content="general">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://auraprincipalgroup.com/">
@@ -36,9 +39,22 @@
   <!-- Favicons -->
   <link href="img/logos/aura-color-bg-square.png" rel="icon">
   <link href="img/logos/aura-color-bg-square.png" rel="apple-touch-icon">
+  
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#154854">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Aura Principal Group">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Preload critical resources -->
+  <link rel="preload" href="img/stock-images/cityline.webp" as="image" type="image/webp">
+  <link rel="preload" href="img/logos/aura-color-transparent-bg.png" as="image" type="image/png">
+  
+  <!-- Google Fonts with preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -58,7 +74,7 @@
   <meta name="google-site-verification" content="0AmIRI3q4CIZeMUH41AeueY6EncWo1J2xtMa3-IrF7g" />
 
 
-  <!-- Structured Data -->
+  <!-- Enhanced Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -70,6 +86,8 @@
     "email": "contact@auraprincipalgroup.com",
     "foundingDate": "2024",
     "industry": "Investment Management",
+    "knowsAbout": ["Investment Management", "Venture Capital", "Private Equity", "Growth Capital", "Business Development"],
+    "serviceType": ["Investment Management", "Venture Capital", "Strategic Consulting"],
     "sameAs": [
       "https://www.linkedin.com/company/aura-principal-group"
     ],
@@ -91,6 +109,15 @@
           "@type": "Organization",
           "name": "Aura Principal Group"
         }
+      },
+      {
+        "@type": "Person",
+        "name": "Cypress Tucker",
+        "jobTitle": "Director of Administrative Services",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Aura Principal Group"
+        }
       }
     ],
     "investmentFocus": [
@@ -99,6 +126,22 @@
       "Cash Flow Positive Businesses",
       "Strategic Partnerships"
     ]
+  }
+  </script>
+
+  <!-- Additional Structured Data for Financial Services -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "name": "Aura Principal Group Investment Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Aura Principal Group"
+    },
+    "serviceType": "Investment Management",
+    "areaServed": "US",
+    "description": "Professional investment management and venture capital services focusing on cash flow positive businesses."
   }
   </script>
 
@@ -1047,16 +1090,16 @@
             </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container">
-      <h1>Aura <span>Principal Group</span></h1>
-      <h2>Investing in venture and growing cash flow positive businesses</h2>
-      <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto">Learn More</a>
+      <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+      <div class="container">
+        <h1>Aura <span>Principal Group</span></h1>
+        <h2>Investing in venture and growing cash flow positive businesses</h2>
+        <div class="d-flex">
+          <a href="#about" class="btn-get-started scrollto" aria-label="Learn more about Aura Principal Group">Learn More</a>
+              </div>
             </div>
-          </div>
-  </section><!-- End Hero -->
+    </section><!-- End Hero -->
 
   <main id="main">
 
@@ -1067,8 +1110,8 @@
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box">
-              <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
-              <h4 class="title"><a href="">Growth Capital</a></h4>
+              <div class="icon"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></div>
+              <h4 class="title"><a href="#strategies" aria-label="Learn more about Growth Capital services">Growth Capital</a></h4>
               <p class="description">Partnering with established businesses seeking capital for expansion and growth initiatives</p>
             </div>
           </div>

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://auraprincipalgroup.com/sitemap.xml
+
+# Optional: Block common non-essential paths if they exist
+# Disallow: /admin/
+# Disallow: /.git/ 
