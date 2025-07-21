@@ -547,6 +547,128 @@
     }
 
     /*--------------------------------------------------------------
+    # Investment Approach Section
+    --------------------------------------------------------------*/
+    .criteria-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+      transition: all 0.3s ease-in-out;
+      border: 1px solid #e9ecef;
+    }
+
+    .criteria-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 40px 0 rgba(68, 88, 144, 0.20);
+    }
+
+    .criteria-header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--color-light);
+    }
+
+    .criteria-header h4 {
+      color: var(--color-primary);
+      font-weight: 700;
+      margin-bottom: 0;
+      font-family: var(--font-secondary);
+    }
+
+    .criteria-content p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .criteria-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .criteria-list li {
+      padding: 8px 0;
+      display: flex;
+      align-items: flex-start;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .criteria-list li i {
+      margin-right: 10px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .value-creation-section {
+      margin-top: 40px;
+    }
+
+    .section-header h3 {
+      color: var(--color-primary);
+      font-weight: 700;
+      font-family: var(--font-secondary);
+      margin-bottom: 20px;
+    }
+
+    .section-header .lead {
+      color: #666;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .value-item {
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .value-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .value-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      background: var(--color-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .value-icon i {
+      font-size: 32px;
+      color: var(--color-accent);
+      transition: all 0.3s ease;
+    }
+
+    .value-item:hover .value-icon {
+      background: var(--color-primary);
+      transform: scale(1.1);
+    }
+
+    .value-item:hover .value-icon i {
+      color: #fff;
+    }
+
+    .value-item h5 {
+      color: var(--color-primary);
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-family: var(--font-secondary);
+    }
+
+    .value-item p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /*--------------------------------------------------------------
     # Strategies Section (Services)
     --------------------------------------------------------------*/
     .services .icon-box {
@@ -1080,6 +1202,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">Our Firm</a></li>
+          <li><a class="nav-link scrollto" href="#approach">Investment Approach</a></li>
           <li><a class="nav-link scrollto" href="#strategies">Strategies</a></li>
           <li><a class="nav-link scrollto" href="#portfolio">Portfolio Companies</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
@@ -1154,7 +1277,7 @@
           <h2>Our Firm</h2>
           <h3>Our <span>Difference</span></h3>
           <p>Aura Principal Group focuses on identifying and investing in exceptional businesses with strong fundamentals and growth potential.</p>
-              </div>
+        </div>
 
         <div class="row">
           <div class="col-lg-6">
@@ -1173,24 +1296,117 @@
                 <div>
                   <h5>Proven Business Models</h5>
                   <p>We invest in companies with established revenue streams and demonstrated market traction</p>
-              </div>
+                </div>
               </li>
               <li>
                 <i class="bi bi-check-circle"></i>
                 <div>
                   <h5>Cash Flow Positive</h5>
                   <p>Our focus is on profitable businesses that generate consistent positive cash flows</p>
-              </div>
+                </div>
               </li>
             </ul>
             <p>
               Our investment approach combines patient capital with strategic expertise, enabling our portfolio companies to achieve sustainable growth while maintaining their entrepreneurial spirit and operational excellence.
-                </p>
-              </div>
+            </p>
+          </div>
         </div>
 
       </div>
     </section><!-- End About Section -->
+
+        <!-- ======= Investment Approach Section ======= -->
+    <section id="approach" class="approach section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Philosophy</h2>
+          <h3>Our Investment <span>Approach</span></h3>
+          <p>We believe in building long-term partnerships with exceptional entrepreneurs and management teams who share our commitment to sustainable growth and operational excellence.</p>
+        </div>
+
+        <!-- Investment Criteria Cards -->
+        <div class="row mb-5">
+          <div class="col-lg-6 mb-4">
+            <div class="criteria-card h-100">
+              <div class="criteria-header">
+                <i class="bi bi-graph-up fs-1 text-primary mb-3"></i>
+                <h4>Financial Performance</h4>
+              </div>
+              <div class="criteria-content">
+                <p class="mb-3">Our investment decisions focus on businesses that demonstrate strong financial fundamentals and sustainable growth potential.</p>
+                <ul class="criteria-list">
+                  <li><i class="bi bi-check-circle text-success me-2"></i> Consistent revenue growth and positive cash flows</li>
+                  <li><i class="bi bi-check-circle text-success me-2"></i> Strong unit economics and scalable business models</li>
+                  <li><i class="bi bi-check-circle text-success me-2"></i> Efficient capital allocation and working capital management</li>
+                  <li><i class="bi bi-check-circle text-success me-2"></i> Clear path to sustained profitability and growth</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="criteria-card h-100">
+              <div class="criteria-header">
+                <i class="bi bi-bullseye fs-1 text-primary mb-3"></i>
+                <h4>Strategic Position</h4>
+              </div>
+              <div class="criteria-content">
+                <p class="mb-3">We seek companies with defensible competitive advantages and experienced leadership teams in attractive markets.</p>
+                <ul class="criteria-list">
+                  <li><i class="bi bi-check-circle text-success me-2"></i> Defensible market position with competitive moats</li>
+                  <li><i class="bi bi-check-circle text-success me-2"></i> Large addressable markets with growth opportunities</li>
+                  <li><i class="bi bi-check-circle text-success me-2"></i> Strong customer relationships and recurring revenue</li>
+                  <li><i class="bi bi-check-circle text-success me-2"></i> Experienced management teams with proven track records</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Value Creation Section -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="value-creation-section">
+              <div class="section-header text-center mb-5">
+                <h3>Value Creation Framework</h3>
+                <p class="lead">Beyond providing capital, we work closely with our portfolio companies to drive value creation through operational improvements, strategic initiatives, and business development opportunities.</p>
+              </div>
+              
+              <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="value-item text-center">
+                    <div class="value-icon">
+                      <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h5>Operational Excellence</h5>
+                    <p>Working with management to optimize operations, improve efficiency, and implement best practices across all functional areas.</p>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="value-item text-center">
+                    <div class="value-icon">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <h5>Strategic Guidance</h5>
+                    <p>Providing strategic counsel on market expansion, product development, and business model optimization to drive sustainable growth.</p>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="value-item text-center">
+                    <div class="value-icon">
+                      <i class="bi bi-globe"></i>
+                    </div>
+                    <h5>Network Access</h5>
+                    <p>Leveraging our extensive network of industry relationships to create business development and partnership opportunities.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Investment Approach Section -->
 
     <!-- ======= Strategies Section ======= -->
     <section id="strategies" class="services">
@@ -1403,6 +1619,7 @@
             <ul>
               <li><i class="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#about">Our Firm</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#approach">Investment Approach</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#strategies">Strategies</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#portfolio">Portfolio</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#contact">Contact</a></li>
