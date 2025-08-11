@@ -47,28 +47,51 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Aura Principal Group">
 
-  <!-- Preload critical resources -->
-  <link rel="preload" href="img/stock-images/cityline.webp" as="image" type="image/webp">
+  <!-- Preload critical resources - LCP image first with highest priority -->
+  <link rel="preload" href="img/stock-images/cityline.avif" as="image" type="image/avif" fetchpriority="high">
+  <link rel="preload" href="img/stock-images/cityline.webp" as="image" type="image/webp" fetchpriority="high">
   <link rel="preload" href="img/logos/aura-color-transparent-bg.png" as="image" type="image/png">
+  <link rel="preload" href="img/logos/aura-color-bg-wide.png" as="image" type="image/png" media="(max-width: 991px)">
+  <!-- Preload Google Fonts for faster text rendering -->
+  <link rel="preload" href="https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVQUwaEQbjB_mQ.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2" as="font" type="font/woff2" crossorigin>
   
-  <!-- Google Fonts with preconnect for performance -->
+  <!-- Preconnect to critical external origins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  
+  <!-- Google Fonts with optimized loading - Reduced critical path latency -->
+  <!-- Preload only the most critical font weights for instant text rendering -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;700&display=swap" rel="stylesheet"></noscript>
+  <!-- Load additional font weights asynchronously -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,500;0,600;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,500;0,600;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"></noscript>
 
-  <!-- Vendor CSS Files -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Vendor CSS Files - Load non-critical CSS with media print then change to all -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet"></noscript>
 
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DMFT8QMW4F"></script>
+  <!-- Google tag (gtag.js) - Optimized loading -->
   <script>
+    // Load Google Analytics asynchronously after page load to prevent reflows
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-DMFT8QMW4F');
+    
+    // Defer loading of gtag script until after initial page render
+    window.addEventListener('load', function() {
+      var gtagScript = document.createElement('script');
+      gtagScript.async = true;
+      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-DMFT8QMW4F';
+      document.head.appendChild(gtagScript);
+    });
   </script>
 
 
@@ -146,6 +169,32 @@
   }
   </script>
 
+  <!-- Critical CSS for above-the-fold content -->
+  <style>
+    /* Critical CSS for header and hero - inline for fastest rendering */
+    body{margin:0;padding:0;font-family:"Open Sans",sans-serif;color:#444;padding-top:80px}
+    #header{background:#fff;position:fixed;top:0;left:0;right:0;height:80px;z-index:997;box-shadow:0 2px 15px rgba(0,0,0,0.1)}
+    #header .container{display:flex;align-items:center;justify-content:space-between;height:100%}
+    #header .logo img{max-height:70px;width:auto}
+    .navbar ul{margin:0;padding:0;display:flex;list-style:none;align-items:center}
+    .navbar a{display:flex;align-items:center;padding:10px 0 10px 30px;font-size:15px;font-weight:500;color:#154854;text-decoration:none;transition:0.3s}
+    #hero{width:100%;height:80vh;color:white;display:flex;align-items:center;position:relative;overflow:hidden}
+    #hero .hero-bg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}
+    #hero .hero-bg img{width:100%;height:100%;object-fit:cover}
+    #hero::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(45deg,rgba(21,72,84,0.8) 0%,rgba(42,107,120,0.8) 100%);z-index:0}
+    #hero .container{position:relative;z-index:1}
+    #hero h1{margin:0 0 10px 0;font-size:48px;font-weight:700;line-height:56px;font-family:"Poppins",sans-serif}
+    #hero h2{color:rgba(255,255,255,0.8);margin-bottom:50px;font-size:24px}
+    .mobile-nav-toggle{display:none}
+    @media(max-width:991px){
+      body{padding-top:60px}
+      #header{height:60px}
+      #header .logo img{max-height:38px}
+      .mobile-nav-toggle{display:block;color:#154854;font-size:28px;cursor:pointer}
+      .navbar ul{display:none}
+    }
+  </style>
+  
   <!-- Custom CSS -->
   <style>
     :root {
@@ -321,12 +370,7 @@
       }
     }
 
-    /* Fix hero background image on mobile */
-    @media (max-width: 768px) {
-      #hero {
-        background-attachment: scroll; /* Remove fixed attachment on mobile */
-      }
-    }
+
 
     /*--------------------------------------------------------------
     # Hero Section
@@ -334,10 +378,44 @@
     #hero {
       width: 100%;
       height: 80vh;
-      background: linear-gradient(45deg, rgba(21, 72, 84, 0.8) 0%, rgba(42, 107, 120, 0.8) 100%), url('img/stock-images/cityline.webp') center center;
-      background-size: cover;
-      background-attachment: fixed;
       color: white;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Hero background image positioned as absolute element for LCP optimization */
+    #hero .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    #hero .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Overlay gradient */
+    #hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(21, 72, 84, 0.8) 0%, rgba(42, 107, 120, 0.8) 100%);
+      z-index: 0;
+    }
+
+    #hero .container {
+      position: relative;
+      z-index: 1;
     }
 
     #hero h1 {
@@ -1193,8 +1271,8 @@
 
       <div class="logo">
         <picture>
-          <source media="(max-width: 991px)" srcset="img/logos/aura-color-transparent-bg-wide.png">
-          <img src="img/logos/aura-color-transparent-bg.png" alt="Aura Principal Group" loading="lazy">
+          <source media="(max-width: 991px)" srcset="img/logos/aura-color-bg-wide.png">
+          <img src="img/logos/aura-color-transparent-bg.png" alt="Aura Principal Group" loading="eager">
         </picture>
       </div>
 
@@ -1216,6 +1294,13 @@
 
       <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
+      <!-- LCP Hero Background Image - Discoverable in HTML -->
+      <picture class="hero-bg">
+        <source type="image/avif" srcset="img/stock-images/cityline.avif">
+        <source type="image/webp" srcset="img/stock-images/cityline.webp">
+        <img src="img/stock-images/cityline.webp" alt="" fetchpriority="high" loading="eager" width="1920" height="1080">
+      </picture>
+      
       <div class="container">
         <h1>Aura <span>Principal Group</span></h1>
         <h2>Investing in venture and growing cash flow positive businesses</h2>
@@ -1665,11 +1750,24 @@
     </div>
   </footer><!-- End Footer -->
 
-  <!-- Vendor JS Files -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Vendor JS Files - Defer to prevent render blocking -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 
   <!-- Custom JS -->
   <script>
+    // Register Service Worker for better caching
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function(registration) {
+            console.log('ServiceWorker registration successful');
+          })
+          .catch(function(err) {
+            console.log('ServiceWorker registration failed');
+          });
+      });
+    }
+    
     // Smooth scrolling for nav links & mobile menu handling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
